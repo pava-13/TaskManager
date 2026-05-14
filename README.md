@@ -192,60 +192,108 @@ GET	/api/activity	Leader	Activity logs
 
 
 👥 Role Permissions
+
 Feature	Team Leader	Team Member
+
 View all tasks	✅	❌
+
 Create tasks	✅	❌
+
 Assign tasks	✅	❌
+
 Edit tasks	✅	Status only
+
 Delete tasks	✅	❌
+
 View analytics	✅	Personal only
+
 Manage users	✅	❌
+
 🧪 Demo Accounts
+
 Role	Email	Password
+
 Team Leader	alex@team.io	leader123
+
 Team Member	jordan@team.io	member123
+
 Team Member	sam@team.io	member456
+
 Team Member	morgan@team.io	member789
+
 📈 Features
+
 ✅ Secure JWT Authentication
+
 ✅ Role-Based Access
+
 ✅ Task CRUD Operations
+
 ✅ Task Status Tracking
+
 ✅ Deadline Management
+
 ✅ Priority Levels
+
 ✅ Analytics Dashboard
+
 ✅ Activity Audit Logs
+
 ✅ Responsive UI
+
 ✅ Real-Time Filtering
 
 
 🗃️ Migration to PostgreSQL
+
 To migrate from SQLite → PostgreSQL:
+
 Replace
+
 better-sqlite3
+
 with
+
 pg
+
 Update Queries
+
 SQLite
+
 db.prepare(sql).get(...)
+
 PostgreSQL
+
 await pool.query(sql, params)
+
 Schema Changes
+
 SQLite	PostgreSQL
+
 INTEGER PRIMARY KEY AUTOINCREMENT	SERIAL PRIMARY KEY
+
 datetime('now')	NOW()
+
 PRAGMA foreign_keys = ON	Not required
 
 🚀 Future Improvements
+
 WebSocket Real-Time Updates
+
 Notifications System
+
 File Attachments
+
 Dark Mode
+
 Kanban Drag & Drop
+
 Email Reminders
+
 Team Chat Integration
 
 📄 License
+
 This project is licensed under the MIT License.
 
 👨‍💻 Author
