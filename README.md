@@ -41,6 +41,7 @@ bcrypt Password Hashing
 
 🗄️ Database Schema
 Users Table
+
 CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
@@ -55,6 +56,7 @@ CREATE TABLE users (
 
 
 Tasks Table
+
 CREATE TABLE tasks (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL,
@@ -73,6 +75,7 @@ CREATE TABLE tasks (
 
 
 Activity Log Table
+
 CREATE TABLE activity_log (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER REFERENCES users(id),
