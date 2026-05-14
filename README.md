@@ -52,6 +52,8 @@ CREATE TABLE users (
   color TEXT DEFAULT '#6366f1',
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+
 Tasks Table
 CREATE TABLE tasks (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -68,6 +70,8 @@ CREATE TABLE tasks (
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+
 Activity Log Table
 CREATE TABLE activity_log (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
