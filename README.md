@@ -40,6 +40,7 @@ bcrypt Password Hashing
 
 
 🗄️ Database Schema
+
 Users Table
 
 CREATE TABLE users (
@@ -87,7 +88,9 @@ CREATE TABLE activity_log (
 
 
 ⚙️ Installation & Setup
+
 1️⃣ Backend Setup
+
 cd backend
 npm install
 Start Server
@@ -102,6 +105,7 @@ http://localhost:3001
 The SQLite database (taskflow.db) is automatically created with seed data during first run.
 
 2️⃣ Frontend Setup
+
 npx create-react-app frontend
 cd frontend
 
@@ -121,6 +125,7 @@ http://localhost:3000
 
 
 🔗 Connecting Frontend to Backend
+
 Replace the in-memory DB object inside TaskManager.jsx with API calls using fetch().
 
 Example — Login API
@@ -160,17 +165,29 @@ Authorization: Bearer <jwt_token>
 
 📡 API Endpoints
 Method	Endpoint	Access	Description
+
 POST	/api/auth/login	Public	Login & get JWT
+
 GET	/api/auth/me	Any	Get current user
+
 GET	/api/users	Any	List users
+
 POST	/api/users	Leader	Create user
+
 DELETE	/api/users/:id	Leader	Delete user
+
 GET	/api/tasks	Any	Get tasks
+
 POST	/api/tasks	Leader	Create task
+
 PATCH	/api/tasks/:id	Any	Update task
+
 DELETE	/api/tasks/:id	Leader	Delete task
+
 GET	/api/analytics/summary	Leader	Full analytics
+
 GET	/api/analytics/my	Any	Personal analytics
+
 GET	/api/activity	Leader	Activity logs
 
 
